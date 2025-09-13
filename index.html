@@ -6,30 +6,64 @@
   <style>
     body {
       font-family: system-ui, sans-serif;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #333;
+      margin: 0;
+      padding: 2rem;
+      background: #fafafa;
+      color: #222;
     }
-    h1 { font-size: 2em; margin-bottom: 0.5em; }
-    .project { margin: 1.5em 0; }
-    a { color: #007acc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    p.subtitle {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    .projects {
+      display: grid;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .project {
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fff;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .project a {
+      font-size: 1.3rem;
+      color: #007acc;
+      text-decoration: none;
+    }
+    .links {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    .links a {
+      margin: 0 1rem;
+      color: #007acc;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <h1>Hola, soy [Tu Nombre]</h1>
-  <p>Soy data scientist. Aquí están algunos de mis proyectos:</p>
+  <header>
+    <h1>Hola, soy [Tu Nombre]</h1>
+    <p class="subtitle">Data Scientist | Machine Learning | Visualización</p>
+  </header>
 
-  <div class="project">
-    <strong><a href="https://github.com/tusuario/proyecto1">📊 Análisis de conflictos globales (ACLED)</a></strong><br>
-    <small>Exploración y visualización de datos de conflictos armados.</small>
-  </div>
-
-  <div class="project">
-    <strong><a href="https://github.com/tusuario/proyecto2">🤖 Modelo de predicción</a></strong><br>
-    <small>Clasificación con Random Forest y métricas de validación.</small>
-  </div>
-
-  <p>➡️ <a href="https://github.com/tusua
+  <section class="projects">
+    <div class="project">
+      <a href="https://github.com/tusuario/proyecto1">📊 Análisis de conflictos globales (ACLED)</a>
+      <p>Exploración y visualización de datos de conflictos armad
