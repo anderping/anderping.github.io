@@ -8,66 +8,90 @@
       font-family: system-ui, sans-serif;
       margin: 0;
       padding: 2rem;
-      background: #f0f2f5;
+      background: linear-gradient(135deg, #f0f2f5, #e6ebf1);
       color: #222;
     }
     header {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin: 0;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    h1::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background: #007acc;
+      border-radius: 2px;
     }
     p.subtitle {
-      font-size: 1.2rem;
-      color: #555;
-      margin-top: 0.5rem;
+      font-size: 1.3rem;
+      color: #444;
+      margin-top: 0.8rem;
     }
     p.intro {
-      font-size: 1.1rem;
-      color: #666;
+      font-size: 1.15rem;
+      color: #555;
       margin-top: 1rem;
     }
     .projects {
       display: grid;
-      gap: 1.5rem;
+      gap: 1.8rem;
       max-width: 1000px;
       margin: 0 auto;
     }
     .project {
       display: block;
-      padding: 1.5rem;
-      border: 1px solid #ddd;
-      border-radius: 12px;
+      padding: 1.8rem;
+      border-radius: 14px;
       background: #fff;
-      color: inherit;
+      border: 1px solid #ddd;
       text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      color: inherit;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
     }
     .project:hover {
       transform: translateY(-6px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      background: linear-gradient(135deg, #ffffff, #f9fbff);
       border-color: #007acc;
     }
     .project h3 {
-      margin: 0 0 0.5rem;
-      font-size: 1.3rem;
+      margin: 0 0 0.6rem;
+      font-size: 1.4rem;
       color: #007acc;
     }
     .project p {
       margin: 0;
       color: #444;
+      line-height: 1.5;
     }
     .links {
       margin-top: 3rem;
       text-align: center;
-      font-size: 1.1rem;
     }
     .links a {
+      display: inline-block;
       margin: 0 1rem;
-      color: #007acc;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      color: #fff;
+      background: #007acc;
       text-decoration: none;
+      transition: background 0.25s ease;
+    }
+    .links a:hover {
+      background: #005f99;
     }
   </style>
 </head>
@@ -111,7 +135,7 @@
 
     <a class="project" href="https://github.com/anderping/Loan-Approval-Prediction">
       <h3>🏦 Loan Approval Prediction</h3>
-      <p>Prpyecto Kaggle sobre aprobación de préstamos.</p>
+      <p>Proyecto Kaggle sobre aprobación de préstamos.</p>
     </a>
 
     <a class="project" href="https://github.com/anderping/Mental-Health">
@@ -121,8 +145,8 @@
   </section>
 
   <div class="links">
-    ➡️ <a href="https://github.com/anderping">GitHub</a> | 
-    <a href="https://www.linkedin.com/in/ander-p-336543162/">LinkedIn</a>
+    <a href="https://github.com/anderping">🌐 GitHub</a>
+    <a href="https://www.linkedin.com/in/ander-p-336543162/">💼 LinkedIn</a>
   </div>
 </body>
 </html>
