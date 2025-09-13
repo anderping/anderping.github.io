@@ -8,12 +8,12 @@
       font-family: system-ui, sans-serif;
       margin: 0;
       padding: 2rem;
-      background: #fafafa;
+      background: #f0f2f5;
       color: #222;
     }
     header {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
     h1 {
       font-size: 2.5rem;
@@ -22,28 +22,42 @@
     p.subtitle {
       font-size: 1.2rem;
       color: #555;
+      margin-top: 0.5rem;
+    }
+    p.intro {
+      font-size: 1.1rem;
+      color: #666;
+      margin-top: 1rem;
     }
     .projects {
       display: grid;
-      gap: 2rem;
+      gap: 1.5rem;
       max-width: 1000px;
       margin: 0 auto;
     }
     .project {
+      display: block;
       padding: 1.5rem;
       border: 1px solid #ddd;
-      border-radius: 10px;
+      border-radius: 12px;
       background: #fff;
-      transition: transform 0.2s, box-shadow 0.2s;
+      color: inherit;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     }
     .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transform: translateY(-6px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+      border-color: #007acc;
     }
-    .project a {
+    .project h3 {
+      margin: 0 0 0.5rem;
       font-size: 1.3rem;
       color: #007acc;
-      text-decoration: none;
+    }
+    .project p {
+      margin: 0;
+      color: #444;
     }
     .links {
       margin-top: 3rem;
@@ -61,53 +75,54 @@
   <header>
     <h1>Hola, soy Ander</h1>
     <p class="subtitle">Ingeniero de Software especializado en modelos de ML y herramientas NLP | Data Scientist</p>
+    <p class="intro">Aquí puedes ver una selección de mis proyectos personales y profesionales:</p>
   </header>
 
   <section class="projects">
-    <div class="project">
-      <a href="https://github.com/anderping/Flask-API-Integration-for-Terra">📊 Flask API Integration for Terra</a>
-      <p>This API provides two main endpoints for ML model prediction and report generation.</p>
-    </div>
+    <a class="project" href="https://github.com/anderping/Flask-API-Integration-for-Terra">
+      <h3>📊 Flask API Integration for Terra</h3>
+      <p>API con endpoints para predicción de modelos de ML y generación de reportes.</p>
+    </a>
 
-    <div class="project">
-      <a href="https://github.com/anderping/Kickstarter-ML">🤖 Kickstarter Pack</a>
-      <p>Modelado mediante ML para la predicción del éxito de los proyectos en Kickstarter.</p>
-    </div>
+    <a class="project" href="https://github.com/anderping/Kickstarter-ML">
+      <h3>🤖 Kickstarter Pack</h3>
+      <p>Modelado mediante ML para predecir el éxito de proyectos en Kickstarter.</p>
+    </a>
 
-    <div class="project">
-      <a href="https://github.com/anderping/Spotify-EDA">🎵 Spotify EDA</a>
-      <p>Cómo triunfar en Spotify (sin gastar mucho dinero). ¿Tiene Spotify influencia directa en el éxito de las canciones en función de sus características?</p>
-    </div>
+    <a class="project" href="https://github.com/anderping/Spotify-EDA">
+      <h3>🎵 Spotify EDA</h3>
+      <p>Análisis exploratorio: ¿Influyen las características de las canciones en su éxito?</p>
+    </a>
 
-    <div class="project">
-      <a href="https://github.com/anderping/Prediccion-de-Precios-de-Portatiles">💻 Predicción de precios de portátiles</a>
-      <p>Proyecto de Kaggle para la "Predicción de precios de portátiles".</p>
-    </div>
+    <a class="project" href="https://github.com/anderping/Prediccion-de-Precios-de-Portatiles">
+      <h3>💻 Predicción de precios de portátiles</h3>
+      <p>Proyecto Kaggle para estimar precios de portátiles con ML.</p>
+    </a>
 
-    <div class="project">
-      <a href="https://github.com/anderping/Hundir-la-flota">🚢 Hundir la flota</a>
-      <p>Implementación del clásico juego Hundir la flota.</p>
-    </div>
+    <a class="project" href="https://github.com/anderping/Hundir-la-flota">
+      <h3>🚢 Hundir la flota</h3>
+      <p>Implementación del clásico juego de mesa en código.</p>
+    </a>
 
-    <div class="project">
-      <a href="https://github.com/anderping/Application-Filler--WIP">📝 Application Filler - WIP</a>
-      <p>"Application Filler" is a tool made out of the weariness of having to fill out manually individual profile sites to apply for different jobs.</p>
-    </div>
+    <a class="project" href="https://github.com/anderping/Application-Filler--WIP">
+      <h3>📝 Application Filler - WIP</h3>
+      <p>Herramienta para automatizar el llenado de formularios de aplicaciones de empleo.</p>
+    </a>
 
-    <div class="project">
-      <a href="https://github.com/tusuario/proyecto2">🤖 Modelo de predicción</a>
+    <a class="project" href="https://github.com/tusuario/proyecto2">
+      <h3>🤖 Modelo de predicción</h3>
       <p>Clasificación con Random Forest y métricas de validación.</p>
-    </div>
+    </a>
 
-    <div class="project">
-      <a href="https://github.com/anderping/Loan-Approval-Prediction">🏦 Loan Approval Prediction</a>
-      <p>Kaggle project on "Loan Approval Prediction".</p>
-    </div>
+    <a class="project" href="https://github.com/anderping/Loan-Approval-Prediction">
+      <h3>🏦 Loan Approval Prediction</h3>
+      <p>Kaggle project sobre aprobación de préstamos.</p>
+    </a>
 
-    <div class="project">
-      <a href="https://github.com/anderping/Mental-Health">🧠 Mental Health</a>
-      <p>Kaggle project on "Mental Health".</p>
-    </div>
+    <a class="project" href="https://github.com/anderping/Mental-Health">
+      <h3>🧠 Mental Health</h3>
+      <p>Kaggle project sobre predicción de problemas de salud mental.</p>
+    </a>
   </section>
 
   <div class="links">
