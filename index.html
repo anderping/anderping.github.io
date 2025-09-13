@@ -5,148 +5,202 @@
   <title>Ander's Portfolio</title>
   <style>
     body {
-      font-family: system-ui, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 2rem;
-      background: linear-gradient(135deg, #f0f2f5, #e6ebf1);
-      color: #222;
+      padding: 0;
+      background: #f0f4f8;
+      color: #333;
     }
+
     header {
+      background: #34495e;
+      color: #fff;
       text-align: center;
+      padding: 4rem 2rem 3rem;
+      position: relative;
+      overflow: hidden;
       margin-bottom: 2.5rem;
     }
-    h1 {
-      font-size: 3rem;
-      margin: 0;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 0.3rem;
-    }
-    h1::after {
-      content: "";
+    
+    header::before {
+      content: '';
       position: absolute;
+      top: 0;
       left: 0;
-      bottom: 0;
       width: 100%;
-      height: 0;
-      background: transparent;
-      border-radius: 2px;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(52, 73, 94, 0.9), rgba(44, 62, 80, 0.9));
+      z-index: 1;
     }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
     p.subtitle {
-      font-size: 1.3rem;
-      color: #444;
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: #ecf0f1;
       margin-top: 0.8rem;
     }
+
     p.intro {
-      font-size: 1.15rem;
-      color: #555;
+      font-size: 1.2rem;
+      color: #ecf0f1;
       margin-top: 1rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
     .projects {
       display: grid;
-      gap: 1.8rem;
-      max-width: 1000px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
       margin: 0 auto;
+      padding-bottom: 3rem;
     }
+
     .project {
-      display: block;
-      padding: 1.8rem;
-      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      border-radius: 16px;
       background: #fff;
-      border: 1px solid #ddd;
+      border: 1px solid #e0e6ed;
       text-decoration: none;
       color: inherit;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .project:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-      background: linear-gradient(135deg, #ffffff, #f9fbff);
-      border-color: #007acc;
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
     }
+
     .project h3 {
-      margin: 0 0 0.6rem;
-      font-size: 1.4rem;
-      color: #007acc;
+      margin: 0 0 0.8rem;
+      font-size: 1.5rem;
+      color: #2980b9;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
+
     .project p {
       margin: 0;
-      color: #444;
-      line-height: 1.5;
+      color: #555;
+      line-height: 1.6;
     }
+
     .links {
       margin-top: 3rem;
+      padding: 2rem 0;
       text-align: center;
+      background: #e9ecef;
+      border-top: 1px solid #dcdfe3;
     }
+
     .links a {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       margin: 0 1rem;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
+      padding: 0.8rem 1.6rem;
+      border-radius: 10px;
       font-size: 1.1rem;
       color: #fff;
-      background: #007acc;
+      background: #3498db;
       text-decoration: none;
-      transition: background 0.25s ease;
+      transition: background 0.3s ease, transform 0.3s ease;
+      font-weight: 600;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
+
     .links a:hover {
-      background: #005f99;
+      background: #2980b9;
+      transform: translateY(-2px);
     }
+
+    .icon {
+      font-size: 1.2rem;
+    }
+
+    /* Google Fonts Import */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
   </style>
 </head>
 <body>
   <header>
-    <h1>Hi, I'm Ander!</h1>
-    <p class="subtitle">Software Engineer specializing in ML models and NLP tools | Data Scientist</p>
-    <p class="intro">Here you can see a selection of my personal and professional projects:</p>
+    <div class="header-content">
+      <h1>Hi, I'm Ander!</h1>
+      <p class="subtitle">Software Engineer specializing in ML models and NLP tools | Data Scientist</p>
+      <p class="intro">Here you can see a selection of my personal and professional projects:</p>
+    </div>
   </header>
 
-  <section class="projects">
-    <a class="project" href="https://github.com/anderping/Flask-API-Integration-for-Terra">
-      <h3>📊 Flask API Integration for Terra</h3>
-      <p>API with endpoints for ML model prediction and report generation.</p>
-    </a>
+  <div class="container">
+    <section class="projects">
+      <a class="project" href="https://github.com/anderping/Flask-API-Integration-for-Terra">
+        <h3><span class="icon">📊</span> Flask API Integration for Terra</h3>
+        <p>API with endpoints for ML model prediction and report generation.</p>
+      </a>
 
-    <a class="project" href="https://github.com/anderping/Kickstarter-ML">
-      <h3>🤖 Kickstarter Pack</h3>
-      <p>ML modeling to predict the success of projects on Kickstarter.</p>
-    </a>
+      <a class="project" href="https://github.com/anderping/Kickstarter-ML">
+        <h3><span class="icon">🤖</span> Kickstarter Pack</h3>
+        <p>ML modeling to predict the success of projects on Kickstarter.</p>
+      </a>
 
-    <a class="project" href="https://github.com/anderping/Spotify-EDA">
-      <h3>🎵 Spotify EDA</h3>
-      <p>Exploratory analysis: Do song characteristics influence their success?</p>
-    </a>
+      <a class="project" href="https://github.com/anderping/Spotify-EDA">
+        <h3><span class="icon">🎵</span> Spotify EDA</h3>
+        <p>Exploratory analysis: Do song characteristics influence their success?</p>
+      </a>
 
-    <a class="project" href="https://github.com/anderping/Prediccion-de-Precios-de-Portatiles">
-      <h3>💻 Laptop Price Prediction</h3>
-      <p>Kaggle project to estimate laptop prices with ML.</p>
-    </a>
+      <a class="project" href="https://github.com/anderping/Prediccion-de-Precios-de-Portatiles">
+        <h3><span class="icon">💻</span> Laptop Price Prediction</h3>
+        <p>Kaggle project to estimate laptop prices with ML.</p>
+      </a>
 
-    <a class="project" href="https://github.com/anderping/Application-Filler--WIP">
-      <h3>📝 Application Filler - WIP</h3>
-      <p>A tool to automate the editing of job application forms.</p>
-    </a>
+      <a class="project" href="https://github.com/anderping/Hundir-la-flota">
+        <h3><span class="icon">🚢</span> Battleship</h3>
+        <p>Implementation of the classic board game in code.</p>
+      </a>
 
-    <a class="project" href="https://github.com/anderping/Hundir-la-flota">
-      <h3>🚢 Battleship</h3>
-      <p>Implementation of the classic board game in code.</p>
-    </a>
+      <a class="project" href="https://github.com/anderping/Application-Filler--WIP">
+        <h3><span class="icon">📝</span> Application Filler - WIP</h3>
+        <p>A tool to automate the editing of job application forms.</p>
+      </a>
 
-    <a class="project" href="https://github.com/anderping/Loan-Approval-Prediction">
-      <h3>🏦 Loan Approval Prediction</h3>
-      <p>Kaggle project on loan approval.</p>
-    </a>
+      <a class="project" href="https://github.com/anderping/Loan-Approval-Prediction">
+        <h3><span class="icon">🏦</span> Loan Approval Prediction</h3>
+        <p>Kaggle project on loan approval.</p>
+      </a>
 
-    <a class="project" href="https://github.com/anderping/Mental-Health">
-      <h3>🧠 Mental Health</h3>
-      <p>Kaggle project on predicting mental health issues.</p>
-    </a>
-  </section>
+      <a class="project" href="https://github.com/anderping/Mental-Health">
+        <h3><span class="icon">🧠</span> Mental Health</h3>
+        <p>Kaggle project on predicting mental health issues.</p>
+      </a>
+    </section>
+  </div>
 
   <div class="links">
-    <a href="https://github.com/anderping">🌐 GitHub</a>
-    <a href="https://www.linkedin.com/in/ander-p-336543162/">💼 LinkedIn</a>
+    <a href="https://github.com/anderping"><span class="icon">🌐</span> GitHub</a>
+    <a href="https://www.linkedin.com/in/ander-p-336543162/"><span class="icon">💼</span> LinkedIn</a>
   </div>
 </body>
 </html>
