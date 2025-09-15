@@ -60,28 +60,23 @@
     }
 
     .top-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-left: 1rem;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      color: #fff;
-      background: #3498db;
+      color: #ecf0f1;
       text-decoration: none;
-      transition: background 0.3s ease, transform 0.3s ease;
-      font-weight: 600;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      font-weight: 500;
+      margin-left: 1rem;
+      font-size: 1rem;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 2px;
     }
 
     .top-links a:hover {
-      background: #2980b9;
-      transform: translateY(-2px);
+      color: #fff;
+      border-bottom: 2px solid #fff;
     }
 
     .icon {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     .container {
@@ -143,9 +138,8 @@
         margin-top: 1rem;
       }
       .top-links a {
-        margin: 0 0.5rem;
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
+        margin: 0 0.8rem;
+        font-size: 0.95rem;
       }
     }
 
@@ -164,6 +158,13 @@
       }
       .project p {
         color: #ccc;
+      }
+      .top-links a {
+        color: #ddd;
+      }
+      .top-links a:hover {
+        color: #fff;
+        border-bottom: 2px solid #fff;
       }
     }
 
