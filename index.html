@@ -141,14 +141,48 @@
       font-size: 1.2rem;
     }
 
-    /* Google Fonts Import */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      p.subtitle {
+        font-size: 1.1rem;
+      }
+      p.intro {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #1c1f24;
+        color: #e5e5e5;
+      }
+      header {
+        background: #222;
+      }
+      .project {
+        background: #2a2f36;
+        border: 1px solid #444;
+        color: #e5e5e5;
+      }
+      .project p {
+        color: #ccc;
+      }
+      .links {
+        background: #2a2f36;
+        border-top: 1px solid #444;
+      }
+    }
+
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
   </style>
 </head>
 <body>
   <header>
     <div class="header-content">
-      <h1>Hi, I'm Ander!</h1>
+      <h1>Hi, welcome to my portfolio!</h1>
       <p class="subtitle">Software Engineer specializing in ML models and NLP tools | Data Scientist</p>
       <p class="intro">Here you can see a selection of my personal and professional projects:</p>
     </div>
